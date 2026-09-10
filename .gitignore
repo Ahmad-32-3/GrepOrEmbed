@@ -1,0 +1,7 @@
+node_modules
+dist
+preview.png
+*.log
+manim/media
+manim/__pycache__
+__pycache__

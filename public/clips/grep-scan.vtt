@@ -1,0 +1,10 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.400
+How grep works.
+
+00:00:02.400 --> 00:00:08.200
+Looking for 3pm. Scanning left to right for an exact match.
+
+00:00:08.200 --> 00:00:10.590
+Match found. Grep stops here.

@@ -1,0 +1,10 @@
+hero: ok
+how-it-works: ok
+comparison: ok
+finding: ok
+stress-test: ok
+playground: ok
+zoom-out: ok
+honesty: ok
+takeaways: ok
+footer: ok

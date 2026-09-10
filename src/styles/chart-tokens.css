@@ -1,0 +1,39 @@
+/* ==================================================================
+   src/styles/chart-tokens.css
+
+   Scoped exception to the site's single-accent rule. Charts comparing
+   grep vs. vector need two poles; this file is the only place a
+   second hue exists, and it never leaks outside chart components.
+
+   --chart-grep and --chart-vector are reserved for retriever identity
+   only: teal means grep, amber means vector. Do not reuse them for
+   query vs. candidate, correct vs. incorrect, harness vs. retriever
+   swing, or any other opposition.
+
+   Validated against the real surface this project renders on:
+     node scripts/validate_palette.js "#22a58f,#e2703a" \
+       --mode dark --surface "#101315" --pairs all
+     -> ALL CHECKS PASS (chroma, CVD dE 11.8, normal-vision dE 24.9, contrast >=3:1)
+
+   #22a58f is a re-stepped, chart-only shade of the site's own teal
+   family (between --accent-bright and --accent-deep), used for grep.
+   #e2703a is a warm amber, used for vector. See PROJECT_OUTLINE.md S4.1.
+   ================================================================== */
+
+:root {
+  --chart-grep: #22a58f;
+  --chart-vector: #e2703a;
+  --chart-neutral: var(--bg-raised);
+  --chart-grid: var(--line-hairline);
+
+  /* Model-identity ramp, for charts that encode which model a series is
+     (e.g. category bars) rather than grep vs. vector. Deliberately a single
+     cool-blue hue stepped by lightness: not a rainbow, and clear of both
+     semantic poles above, so amber never doubles as "a model" and teal never
+     doubles as grep. Five steps, all readable on the near-black surface. */
+  --chart-cat-1: #eaeffb;
+  --chart-cat-2: #bdcef0;
+  --chart-cat-3: #95b1e2;
+  --chart-cat-4: #6b8ed2;
+  --chart-cat-5: #4263a2;
+}
